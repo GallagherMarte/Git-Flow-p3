@@ -151,12 +151,12 @@ siguienteBtn.addEventListener('click', () => {
     const carrera = carreraSelect.value;
 
     
-    confirmacionNombre.textContent = `Nombre: ${nombre}`;
-    confirmacionProvincia.textContent = `Provincia: ${provincia}`;
-    confirmacionCiudad.textContent = `Ciudad: ${ciudad}`;
-    confirmacionSector.textContent = `Sector: ${sector}`;
-    confirmacionCalle.textContent = `Calle: ${calle}`;
-    confirmacionCarrera.textContent = `Carrera: ${carrera}`;
+    confirmacionNombre.textContent = `${nombre}`;
+    confirmacionProvincia.textContent = `${provincia}`;
+    confirmacionCiudad.textContent = `${ciudad}`;
+    confirmacionSector.textContent = `${sector}`;
+    confirmacionCalle.textContent = `${calle}`;
+    confirmacionCarrera.textContent = `${carrera}`;
 
     // Rellenar tabla de horarios seleccionados
     const materiasSeleccionadas = materias[carrera];
