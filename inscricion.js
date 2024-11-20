@@ -118,24 +118,41 @@ registroBtn.addEventListener('click', () => {
         const diaAsignado = diasAsignados[carrera][index]; 
         const div = document.createElement('div');
         div.classList.add('mb-3');
-        div.innerHTML = `
-            <label>${materia} //Día --> ${diaAsignado}</label>
-            <div class="dropdown">
-                <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Seleccionar horario
-                </button>
-                <ul class="dropdown-menu">
-                    ${Horario.map(horario => `
-                        <li>
-                            <button class="dropdown-item" type="button">
-                                <input type="radio" name="${materia}" value="${horario}" class="form-check-input" style="margin-right: 5px;">
-                                ${horario}
-                            </button>
-                        </li>
-                    `).join('')}
-                </ul>
-            </div>
-        `;
+        div.innerHTML = `<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
+            <tr>
+                <th>Materia</th>
+                <th>Día</th>
+                <th>Horario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>${materia}</td>
+                <td>${diaAsignado}</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Seleccionar horario
+                        </button>
+                        <ul class="dropdown-menu">
+                            ${Horario.map(horario => `
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        <input type="radio" name="${materia}" value="${horario}" class="form-check-input me-2">
+                                        ${horario}
+                                    </button>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+`;
     
     materiasContainer.appendChild(div);
     });
