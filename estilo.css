@@ -25,3 +25,34 @@ body {
 .hidden {
     display: none;
 }
+.hidden {
+    display: none;
+}
+/* Fondo de imagen */
+/* Fondo de pantalla */
+body {
+    background-image: url('https://w.wallhaven.cc/full/yx/wallhaven-yxdrex.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Superposición para destacar el contenido */
+.bg-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Texto */
+h1, h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
