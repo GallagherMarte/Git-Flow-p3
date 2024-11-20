@@ -25,3 +25,17 @@ body {
 .hidden {
     display: none;
 }
+/* Fondo de imagen */
+body {
+    background-image: url('https://w.wallhaven.cc/full/yx/wallhaven-yxdrex.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Opcional: Para agregar un filtro sobre la imagen (por ejemplo, un color oscuro) */
+.bg-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Filtro oscuro */
+    padding: 20px;
+    border-radius: 10px;
+}
